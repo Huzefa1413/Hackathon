@@ -60,19 +60,18 @@ const Signin = () => {
     })
 
     return (
-        <form onSubmit={formik.handleSubmit}>
-            <h2>Sign in</h2>
-            <div>
+        <form className='mysf' onSubmit={formik.handleSubmit}>
+            <h2 className="title">Welcome to SMIT Attendance System</h2>
+            <h2 className="title">Sign in as Admin</h2>
+            <div className="input-field">
                 <input name='email' type="email" placeholder="Email" value={formik.values.email} onChange={formik.handleChange} />
             </div>
             <span>{formik.touched.email && formik.errors.email}</span>
-            <div>
+            <div className="input-field">
                 <input name='password' type="password" placeholder="Password" value={formik.values.password} onChange={formik.handleChange} />
             </div>
             <span>{formik.touched.password && formik.errors.password}</span>
-            <div>
-                <input value="Login" type='submit' className="btn" />
-            </div>
+            <input value="Login" type='submit' className="btn" />
         </form>
     )
 }
